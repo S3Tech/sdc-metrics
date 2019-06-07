@@ -2,7 +2,7 @@
 <hr/>
 
 
-<%= form_for "action_plan", path: create_action_plan_metrics_path do |f| %>
+<%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
   QCM: <%= f.text_field :qcm %>
   <br/>
   <br/>
@@ -16,5 +16,8 @@
   <br/>
   <br/>  
   Action: <%= f.text_area :action %>
+  <br/>
+  <br/>
+  <%= f.submit 'Submit', class: 'btn btn-sm btn-primary' %>
 
 <% end %>
