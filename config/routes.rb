@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :metrics do
   	collection do 
   	  get 'action_plan'
+  	  post 'create_action_plan'
   	end
   end
 end

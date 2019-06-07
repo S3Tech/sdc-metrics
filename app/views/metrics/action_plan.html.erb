@@ -2,3 +2,19 @@
 <hr/>
 
 
+<%= form_for "action_plan", path: create_action_plan_metrics_path do |f| %>
+  QCM: <%= f.text_field :qcm %>
+  <br/>
+  <br/>
+  Agent: <%= f.text_field :agent %>
+  <br/>
+  <br/>
+  Specific Behavior: <%= f.text_area :specific_behavior %>
+  <br/>
+  <br/>
+  Measurable: <%= f.text_area :measurable %>
+  <br/>
+  <br/>  
+  Action: <%= f.text_area :action %>
+
+<% end %>
