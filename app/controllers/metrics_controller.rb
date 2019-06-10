@@ -1,5 +1,6 @@
 class MetricsController < ApplicationController
   def index
+    @action_plans = ActionPlan.all
   end
 
   def action_plan
