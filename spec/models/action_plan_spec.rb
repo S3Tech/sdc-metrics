@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'faker'
 
 RSpec.describe ActionPlan, type: :model do
 
@@ -10,15 +11,15 @@ RSpec.describe ActionPlan, type: :model do
   end
 
   it "is valid with valid attributes" do
-    action_plan.agent = "Bam"
-    action_plan.qcm = "Joks"
+    action_plan.agent = Faker::Name.name 
+    action_plan.qcm = Faker::Name.name
     action_plan.date = DateTime.now
-    action_plan.specific_behavior = "Lorem ipsum"
-    action_plan.measurable = "Lorem ipsum"
-    action_plan.action = "Lorem ipsum"
-    action_plan.relevant = "Lorem ipsum"
-    action_plan.timebound = "Lorem ipsum"
-    action_plan.why = "Lorem ipsum"
+    action_plan.specific_behavior = Faker::Lorem.sentence
+    action_plan.measurable = Faker::Lorem.sentence
+    action_plan.action = Faker::Lorem.sentence
+    action_plan.relevant = Faker::Lorem.sentence
+    action_plan.timebound = Faker::Lorem.sentence
+    action_plan.why = Faker::Lorem.sentence
     expect(action_plan).to be_valid
   end
 end
