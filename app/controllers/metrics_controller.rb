@@ -6,7 +6,16 @@ class MetricsController < ApplicationController
   end
 
   def create_action_plan
-    ActionPlan.create(action_plan_params)
+    @action_plan = ActionPlan.new(action_plan_params)
+
+    if @action_plan.save
+      flash[:notice] = "Action Plan successfully created"
+      redirect_to action_plan_metrics_path
+    else
+      flash[:success] = "Error"
+      redirect_to :back
+    end
+
   end
 
   private
