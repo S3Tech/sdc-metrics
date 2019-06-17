@@ -1,6 +1,6 @@
 class MetricsController < ApplicationController
   def index
-    @action_plans = ActionPlan.all
+    @qcms = ActionPlan::QCM_LIST
   end
 
   def action_plan
@@ -17,6 +17,18 @@ class MetricsController < ApplicationController
       redirect_to :back
     end
 
+  end
+
+  def julius_cap
+  end
+
+  def matthew_cap
+  end
+
+  def tyrone_cap
+  end
+
+  def elmer_cap
   end
 
   private

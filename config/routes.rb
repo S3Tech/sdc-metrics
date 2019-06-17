@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   	collection do 
   	  get 'action_plan'
   	  post 'create_action_plan'
+  	  get 'julius_cap'
+  	  get 'matthew_cap'
+  	  get 'tyrone_cap'
+  	  get 'elmer_cap'
   	end
   end
 end

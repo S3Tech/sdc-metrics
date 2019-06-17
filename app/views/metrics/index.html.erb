@@ -1,5 +1,22 @@
 <center><h1>Smart Action Plan</h1></center>
+  <table class="table">
+	  <thead class="thead-dark">
+	    <tr>
+	      <th scope="col"></th>
+	      <th scope="col">QCM</th>
+	      <th scope="col">Team</th>
+	      <th scope="col">Link</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+			<% @qcms.each do |qcm| %>
+	    <tr>
+	      <th scope="row"></th>
+	      <td><%= qcm[0] %></td>
+	      <td><%= qcm[1] %></td>
+	      <td><a href="metrics/<%= qcm[2] %>">View</a></td>
+	    </tr>
+			<% end %>
+	  </tbody>
+  </table>
 
-<% @action_plans.each do |action_plan| %>
-  <%= action_plan.qcm %>
-<% end %>
