@@ -3,7 +3,7 @@
 
 
 <%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
-  QCM: <%= f.text_field :qcm %>
+  QCM: <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
   <br/>
   <br/>
   Agent: <%= f.text_field :agent %>
