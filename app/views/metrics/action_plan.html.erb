@@ -1,9 +1,16 @@
 <center><h1>Smart Action Plan</h1></center>
 <hr/>
-
-<div class="card">
+<div class="top40"></div>
+<div class="card side20 top20">
   <%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
-    QCM: <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
+    <div class="row">
+      <div class="col-md-1">
+        QCM: 
+      </div>
+      <div class="col-md-10">
+        <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
+      </div>
+    </div>
     <br/>
     <br/>
     Agent: <%= f.text_field :agent %>
