@@ -1,23 +1,27 @@
 <center><h1>Smart Action Plan</h1></center>
 <hr/>
 
+<div class="card">
+  <%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
+    QCM: <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
+    <br/>
+    <br/>
+    Agent: <%= f.text_field :agent %>
+    <br/>
+    <br/>
+    Input Date: <%= f.date_field :date %>
+    <br/>
+    <br/>
+    Specific Behavior: <%= f.text_area :specific_behavior %>
+    <br/>
+    <br/>
+    Measurable: <%= f.text_area :measurable %>
+    <br/>
+    <br/>  
+    Action: <%= f.text_area :action %>
+    <br/>
+    <br/>
+    <%= f.submit 'Submit', class: 'btn btn-sm btn-primary' %>
 
-<%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
-  QCM: <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
-  <br/>
-  <br/>
-  Agent: <%= f.text_field :agent %>
-  <br/>
-  <br/>
-  Specific Behavior: <%= f.text_area :specific_behavior %>
-  <br/>
-  <br/>
-  Measurable: <%= f.text_area :measurable %>
-  <br/>
-  <br/>  
-  Action: <%= f.text_area :action %>
-  <br/>
-  <br/>
-  <%= f.submit 'Submit', class: 'btn btn-sm btn-primary' %>
-
-<% end %>
+  <% end %> 
+</div>
