@@ -1,5 +1,4 @@
 <center><h1>Smart Action Plan</h1></center>
-<hr/>
 <div class="top40"></div>
 <div class="card side20 top20">
   <%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
@@ -13,19 +12,54 @@
     </div>
     <br/>
     <br/>
-    Agent: <%= f.text_field :agent %>
+    <div class="row">
+      <div class="col-md-1">
+        Agent: 
+      </div>
+      <div class="col-md-10">
+        <%= f.text_field :agent %>
+      </div>
+    </div>
     <br/>
     <br/>
-    Input Date: <%= f.date_field :date %>
+    <div class="row">
+      <div class="col-md-2">
+        Input Date:
+      </div>
+      <div class="col-md-10">
+        <%= f.date_field :date %>
+      </div>
+    </div>
     <br/>
     <br/>
-    Specific Behavior: <%= f.text_area :specific_behavior %>
+    <div class="row">
+      <div class="col-md-2">
+        Specific Behavior: 
+      </div>
+      <div class="col-md-10">
+        <%= f.text_area :specific_behavior, class: 'text_area_width' %>
+      </div>
+    </div>
     <br/>
     <br/>
-    Measurable: <%= f.text_area :measurable %>
+    <div class="row">
+      <div class="col-md-2">
+        Measurable: 
+      </div>
+      <div class="col-md-10">
+        <%= f.text_area :measurable, class: 'text_area_width' %>
+      </div>
+    </div>
     <br/>
     <br/>  
-    Action: <%= f.text_area :action %>
+    <div class="row">
+      <div class="col-md-2">
+        Action: 
+      </div>
+      <div class="col-md-10">
+        <%= f.text_area :action, class: 'text_area_width' %>
+      </div>
+    </div>
     <br/>
     <br/>
     <%= f.submit 'Submit', class: 'btn btn-sm btn-primary' %>
