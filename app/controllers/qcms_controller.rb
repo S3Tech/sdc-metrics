@@ -1,0 +1,2 @@
+class QcmsController < ApplicationController
+end

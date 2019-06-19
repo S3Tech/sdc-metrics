@@ -9,7 +9,7 @@ class AgentsController < ApplicationController
   def create
     agent = Agent.new(agent_params)
     if agent.save
-      flash[:notice] = "Action Plan successfully created"
+      flash[:notice] = "Agent successfully created"
       redirect_to agents_path
     else
       flash[:error] = "Error"
