@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :qcms
   resources :agents
 end
