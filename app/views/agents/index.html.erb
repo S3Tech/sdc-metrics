@@ -1,3 +1,22 @@
 <h2><center>Agent list</center></h2>
 <div class="top20"></div>
 <%= link_to 'Create', new_agent_path, class: 'btn btn-sm btn-primary' %>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @agents.each do |agent| %>
+    <tr>
+      <th scope="row"></th>
+      <td><%= agent.first_name %></td>
+      <td><%= agent.last_name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
