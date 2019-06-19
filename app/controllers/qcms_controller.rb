@@ -1,5 +1,6 @@
 class QcmsController < ApplicationController
   def index
+    @qcms = Qcm.all
   end
 
   def new
@@ -21,4 +22,5 @@ class QcmsController < ApplicationController
   def qcm_params
     params.require(:qcm).permit(:first_name, :last_name, :status)
   end
+
 end
