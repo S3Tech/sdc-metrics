@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   root to: "metrics#index"
 
   resources :metrics do
-  	collection do 
-  	  get 'action_plan'
-  	  post 'create_action_plan'
-  	  get 'julius_cap'
-  	  get 'matthew_cap'
-  	  get 'tyrone_cap'
-  	  get 'elmer_cap'
-  	end
+    collection do 
+      get 'action_plan'
+      post 'create_action_plan'
+      get 'julius_cap'
+      get 'matthew_cap'
+      get 'tyrone_cap'
+      get 'elmer_cap'
+    end
   end
+
+  resources :agents
 end
