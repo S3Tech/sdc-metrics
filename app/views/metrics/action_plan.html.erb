@@ -3,21 +3,21 @@
 <div class="card side20 top20">
   <%= form_for "create_plan", url: create_action_plan_metrics_path, method: :post do |f| %>
     <div class="row">
-      <div class="col-md-1">
+      <div class="col-md-2">
         QCM: 
       </div>
       <div class="col-md-10">
-        <%= f.select :qcm, ActionPlan::QCM_LIST, include_blank: true %>
+        <%= f.select :qcm, ActionPlan::QCM_LIST, {include_blank: true}, class: 'form-control', style: "width: 250px;" %>
       </div>
     </div>
     <br/>
     <br/>
     <div class="row">
-      <div class="col-md-1">
+      <div class="col-md-2">
         Agent: 
       </div>
       <div class="col-md-10">
-        <%= f.text_field :agent %>
+        <%= f.text_field :agent, class: 'form-control', style: 'width: 250px;' %>
       </div>
     </div>
     <br/>
